@@ -1,0 +1,211 @@
+# importing the necessary packages
+library(tidyverse)
+library(ggplot2)
+
+# importing the file
+starbucks <- read.csv(file = 'starbucks.csv')
+head(starbucks)
+
+# removing unecessary index column
+sbux <- subset(starbucks, select = -c(X))
+str(sbux) # viewing the data structure
+
+# There are 77 observations in the dataset, described through the following 7 variables:
+# item: food item, string
+# calories: calories, numerical
+# fat: grams of fat in item, numerical
+# carb: grams of carbohydrates in item, numerical
+# fiber: grams of fiber in food item, numerical
+# protein: grams of protein in food item, numerical `type`: a factor with levels bakery, bistro box, hot breakfast, parfait, petite, salad, and sandwich
+
+# finding out how many items there are of each type
+count_type <- sbux %>% 
+  group_by(type) %>% # Variable to be transformed
+  count() %>% 
+  ungroup() %>% 
+  mutate(perc = `n` / sum(`n`)) %>% 
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+count_type
+
+# pie chart of results
+ggplot(count_type, aes(x = "", y = perc, fill = type)) +
+  geom_col(color = NA) +
+  geom_label(aes(label = labels),
+             position = position_stack(vjust = 0.5),
+             show.legend = FALSE) +
+  guides(fill = guide_legend(title = "Food Types")) +
+  coord_polar(theta = "y") + 
+  theme_void() +
+  labs(title = "Breakdown of Starbucks Food Menu Items by Type")
+
+# Food Item Calories: Highest, Lowest & Outliers
+# top 5 highest in calories
+high_cal <- sbux %>% 
+  arrange(desc(calories)) %>% 
+  select(item, calories, type) %>% 
+  head(5)
+high_cal
+
+# top 5 lowest
+low_cal <- sbux %>% 
+  arrange(calories) %>% 
+  select(item, calories, type) %>% 
+  head(5) 
+low_cal
+
+# Average Calorie Content of Each Food Item Type
+avg_cal <- sbux %>% 
+  group_by(type) %>% 
+  summarise(avg_cal = mean(calories)) %>%
+  arrange(desc(avg_cal))
+avg_cal
+
+# visualizing the data in a bar graph
+ggplot(avg_cal, aes(x=reorder(type, avg_cal), y=avg_cal, fill=type)) +
+  geom_bar(stat='identity') +
+  coord_flip() +
+  labs(title='Average Calories by Type', x='Type', y='Average Calories')
+
+# Outliers in calorie information
+boxplot(starbucks$calories,
+        names = c("Calories"),
+        main = "Calorie Distribution in Starbucks Food Items")
+
+# There is only one outlier in the dataset, which lays on the lower extreme of the data. We can identify that particular food item using the code blow:
+c_out <- boxplot.stats(starbucks$calories)$out
+c_out_index <- which(starbucks$calories %in% c_out)
+c_out_item <- starbucks[c_out_index, "item"]
+c_out_item 
+# the item is "Deluxe Fruit Blend"
+
+# Food Items with the Highest Levels of Each Nutritional Property
+# Fat
+high_fat <- sbux %>% arrange(desc(fat)) %>% select(item, fat, type) %>% head(5)
+high_fat
+# Carbohydrates
+high_carb <- sbux %>% arrange(desc(carb)) %>% select(item, carb, type) %>% head(5)
+high_carb
+# Fiber
+high_fiber <- sbux %>% arrange(desc(fiber)) %>% select(item, fiber, type) %>% head(5)
+high_fiber
+# Protein
+high_protein <- sbux %>% arrange(desc(protein)) %>% select(item, protein, type) %>% head(5)
+high_protein
+
+# Food item types with the highest average fat, carbohydrate, fiber, and protein content
+avg_by_type <- sbux %>%
+  group_by(type) %>%
+  summarize(avg_fat = mean(fat),
+            avg_carb = mean(carb),
+            avg_fiber = mean(fiber),
+            avg_protein = mean(protein))
+avg_by_type
+
+# Plotting each avg macronutrient per type in separate bar graphs
+# average fat
+ggplot(avg_by_type, aes(x=reorder(type, -avg_fat), y=avg_fat, fill=type)) +
+  geom_bar(stat='identity') +
+  labs(title='Average Fat by Type', x='Type', y='Average Fat (g)')
+# average carbs
+ggplot(avg_by_type, aes(x=reorder(type, -avg_carb), y=avg_carb, fill=type)) +
+  geom_bar(stat='identity') +
+  labs(title='Average Carb by Type', x='Type', y='Average Carb (g)')
+# average fiber
+ggplot(avg_by_type, aes(x=reorder(type, -avg_fiber), y=avg_fiber, fill=type)) +
+  geom_bar(stat='identity') +
+  labs(title='Average Fiber by Type', x='Type', y='Average Fiber (g)')
+# average protein
+ggplot(avg_by_type, aes(x=reorder(type, -avg_protein), y=avg_protein, fill=type)) +
+  geom_bar(stat='identity') +
+  labs(title='Average Protein by Type', x='Type', y='Average Protein (g)')
+
+# Are there any food items that are particularly rich in fiber but low in fat and carbohydrates?
+summary(sbux)
+# To determine what counts as “rich in fiber” we will take the 3rd quartile value of 4 grams. 
+# For fat, we are going to take the Q1 value of 9 grams. 
+# We will do the same for carbohydrates. Even though the Q1 carb value of 31 is not technically low, 
+# if we pick a lower value we might not be able to find any items that fit our criteria.
+q3 <- sbux %>%
+  filter(fiber > 4, fat < 9, carb < 31) %>%
+  select(item, fiber, fat, carb)
+q3
+
+# Correlation between Caloric Content and Macronutrient Amount
+cor_matrix <- cor(sbux[, c("calories", "fat", "carb", "fiber", "protein")])
+cor_matrix
+
+# remove dendogram
+heatmap(cor_matrix, Rowv = NA, Colv = NA)
+
+# Trends and Patterns in Nutritional Composition, Other Outliers
+# So far in our analysis we have spotted a couple of trends, such as:
+# 1. More than half of the food items at Starbucks belong to the bakery type.
+# 2. The middle 50% of the food items have a caloric content between 300 and 420 kcal.
+# 3. The higher the number of calories in an item, the more likely its fat and carbohydrate content is high as well.
+# 4. Bakery items have the most carbs, sandwiches the most protein, and parfait items the most fat & fiber.
+# Something else we can look into is the distribution of macronutrients among all the food items.
+
+boxplot(sbux$fat, sbux$carb, sbux$fiber, sbux$protein,
+        names = c("Fat", "Carbohydrates", "Fiber", "Protein"),
+        main = "Nutritional Properties Box Plot")
+
+# From this box plot we can confirm that Starbucks food items are richer in carbohydrates than any other nutrient. 
+# However, this chart shows us that there are two outliers in the protein nutrient.
+p_out <- boxplot.stats(sbux$protein)$out
+p_out_indices <- which(sbux$protein %in% p_out)
+p_out_items <- starbucks[p_out_indices, "item"]
+p_out_items
+
+# The two outliers are 
+# [1] "Tarragon Chicken Salad Sandwich"
+# [2] "Turkey & Swiss Sandwich"
+
+# Differences in the Nutritional Profiles of Food Items Across Different Categories
+# stacker bar chart for each type
+
+avg_composition <- aggregate(cbind(fat, carb, fiber, protein) ~ type, sbux, mean)
+
+# Reshape the data into long format
+avg_composition_long <- tidyr::gather(avg_composition, nutrient, value, -type)
+
+# Create the stacked bar chart
+compositions <- ggplot(avg_composition_long, aes(x = type, y = value, fill = nutrient)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Average Composition by Food Type", x = "Food Type", y = "Average Composition") +
+  scale_fill_manual(values = c("steelblue", "lightgreen", "orange", "pink"), 
+                    labels = c("Fat", "Carbohydrates", "Fiber", "Protein")) +
+  theme_minimal()
+compositions
+
+# Food Items that Provide a Good Balance of Macronutrients
+# According to medical professionals (https://www.prospectmedical.com/resources/wellness-center/macronutrients-fats-carbs-protein#:~:text=In%20general%2C%20most%20adults%20should,30%2D40%25%20Fat.), 
+# most adults should target their diets to comprise of 45-65% carbohydrates, 10-35% protein and 20-35% fat. 
+# Keeping that in mind, we can determine which items from the Starbucks dataset can serve as a better meal option.
+
+# First, we need to figure out the composition of each item from the list:
+sum_composition <- aggregate(cbind(fat, carb, fiber, protein) ~ item, sbux, sum)
+
+# Calculate the ratios for each macronutrient within each food type
+ratio_composition <- transform(sum_composition, 
+                               fat_ratio = round(fat / (fat + carb + fiber + protein), 3),
+                               carb_ratio = round(carb / (fat + carb + fiber + protein), 3),
+                               fiber_ratio = round(fiber / (fat + carb + fiber + protein), 3),
+                               protein_ratio = round(protein / (fat + carb + fiber + protein), 3))
+
+# Display the ratio composition
+composition_ratios <- subset(ratio_composition, select = -c(fat, carb, fiber, protein))
+head(composition_ratios)
+
+# Now that we have the list, we can pick out the items that have macronutrients spread across those percentages:
+
+balanced_food <- composition_ratios[
+  composition_ratios$fat_ratio >= 0.2 & composition_ratios$fat_ratio <= 0.35 &
+  composition_ratios$carb_ratio >= 0.45 &
+  composition_ratios$carb_ratio <= 0.65 &
+  composition_ratios$protein_ratio >= 0.1 & composition_ratios$protein_ratio <= 0.35,
+]
+balanced_food
+
+# There are 6 items in the Starbucks food list that can be considered balanced meals in terms of macronutrient composition. 
+# All of them are sandwiches, with the exception of “Protein” that falls under bistro box.
