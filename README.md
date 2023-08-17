@@ -3,7 +3,7 @@
 
 | Project Name  | Link   | Description  |
 |---------------|--------|--------------|
-|GoodReads Web Scraping | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_WebScraping_Python/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file for further analysis. |
+|GoodReads Web Scraper | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_WebScraping_Python/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file for further analysis. |
 
 ## R Projects
 
