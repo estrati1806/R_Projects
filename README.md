@@ -4,7 +4,7 @@
 | Project Name  | Methodology   | Link | Description | 
 | ------------- | ------------- |------|-------------|
 | Starbucks Food Menu Items EDA | R - dplyr & ggplot2| [GitHub](https://github.com/estrati1806/R_Projects/blob/main/SbuxEDA.Rmd) [RPubs](https://rpubs.com/emistrati/StarbucksEDA) | Exploratory data analysis of 77 Starbucks food menu items using dplyr and ggplot. |
-| Choropleth Map for ZIP Codes | R - Choropleth | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/House_Price_Prediction/Choropleth%20Map%20in%20R.R) | Geospatial visualization of average house price per ZIP based on 4600 houses in WA. |
+| Choropleth Map for ZIP Codes | R - Choropleth | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/House_Price_Prediction/Choropleth%20Map%20in%20R.R) | Geospatial visualization of average house price per ZIP based on 4600 houses in WA. [Click here for map.](https://github.com/estrati1806/estrati_portfolio/blob/main/House_Price_Prediction/Choropleth%20Map%20-%20Average%20House%20Price%20per%20ZIP%20Code.png)|
 
 ## Web Scraping
 
