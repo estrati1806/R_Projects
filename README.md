@@ -12,6 +12,12 @@
 |---------------|---------|--------|--------------|
 |GoodReads Web Scraper | Python - Beautiful Soup | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_WebScraping_Python/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file ([Philosophical Books.csv](GoodReads_Web_Scraping/philosophical_books.csv)) for further analysis. |
 
+## Machine Learning
+
+| Project Name | Methodology | Link | Description |
+|--------------|-------------|-------|------------|
+|Image Recognition|YOLO (You Only Look Once) | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/YOLO%20Image%20Detection%20-%20Cat%20Image.R)| Image classification and detection using the image.darknet package.|
+
 ## Dashboards
 | Project Name  | Tableau Link  | Description | 
 | ------------- | ------------- |-------------|
