@@ -1,0 +1,386 @@
+---
+title: "Cardiovascular Disease Classification: Logistic Regression, kNN and Decision Trees"
+author: "Emi Strati"
+date: "2023-08-22"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 3
+    number_sections: true
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction: Cardiovascular Disease Dataset
+
+This project includes exploratory data analysis, feature engineering and the use of three predictive models for cardiovascular disease classification. The dataset was taken from [Kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset).
+
+The dataset consists of 70,000 records of patients data, 11 attributes and 1 target variable (cardio).
+
+Features:
+
+Age \| Objective Feature \| age \| int (days)
+
+Height \| Objective Feature \| height \| int (cm)
+
+Weight \| Objective Feature \| weight \| float (kg)
+
+Gender \| Objective Feature \| gender \| categorical code
+
+Systolic blood pressure \| Examination Feature \| ap_hi \| int
+
+Diastolic blood pressure \| Examination Feature \| ap_lo \| int
+
+Cholesterol \| Examination Feature \| cholesterol \| 1: normal, 2: above normal, 3: well above normal
+
+Glucose \| Examination Feature \| gluc \| 1: normal, 2: above normal, 3: well above normal
+
+Smoking \| Subjective Feature \| smoke \| binary
+
+Alcohol intake \| Subjective Feature \| alco \| binary
+
+Physical activity \| Subjective Feature \| active \| binary
+
+Presence or absence of cardiovascular disease \| Target Variable \| cardio \| binary \|
+
+```{r, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(DescTools)
+library(caret)
+```
+
+# EDA, Feature Engineering, Removing Outliers
+```{r}
+cdata <- read.csv("cardio.csv", sep=';') # data is separated by ; not commas so we convert it do a data frame
+head(cdata)
+str(cdata)
+Abstract(cdata) # no missing values
+```
+
+## Feature Engineering
+
+```{r}
+# dropping id column
+cdata <- cdata %>% select(-id)
+```
+
+All of our predictor variables are numerical (including the ordinal ones), which is what we want them to be for this analysis.
+
+1.  Gender is binary but expressed as 1 (woman) and 2 (man) instead of 0 and 1.
+
+```{r}
+cdata$gender <- ifelse(cdata$gender == 2, 0, 1)
+```
+
+2.  Patient age is given in days, so we will convert it to years with 1 decimal place
+
+```{r}
+cdata$age <- round(cdata$age / 365.0, 1)
+cdata$age <- as.numeric(cdata$age)
+```
+
+3.  Instead of using both height and weight, we will use BMI.
+
+```{r}
+cdata$height<-cdata$height/100 
+cdata$bmi<-round(cdata$weight/cdata$height^2,2)
+# removing height and weight
+cdata <- subset(cdata, select=-c(height, weight))
+head(cdata)
+```
+
+## Exploring the Predictor Variables
+
+1.  Alcohol intake - subjective feature
+
+```{r}
+alcohol <- cdata %>%
+  group_by(alco) %>%
+  summarise(count=n())
+alcohol
+```
+
+2.  Smoking - subjective feature
+
+```{r}
+smoking <- cdata %>%
+  group_by(smoke) %>%
+  summarise(count=n())
+smoking
+```
+
+3.  Physical Activity - subjective feature
+
+```{r}
+exercise <- cdata %>%
+  group_by(active) %>%
+  summarise(count=n())
+exercise
+```
+
+4.  Cholesterol - examination feature - 1: normal, 2: above normal, 3: well above normal
+
+```{r}
+chol <- cdata %>%
+  group_by(cholesterol) %>%
+  summarise(count=n())
+chol
+```
+
+5.  Glucose - examination feature - 1: normal, 2: above normal, 3: well above normal
+
+```{r}
+glucose <- cdata %>%
+  group_by(gluc) %>%
+  summarise(count=n())
+glucose
+```
+
+## Distributions & Removing Outliers
+
+1.  Age
+
+```{r}
+boxplot(cdata$age, main = "Box Plot of Age", ylab = "Age", col = "lightblue", border = "blue")
+Q1a <- quantile(cdata$age, 0.25)
+Q3a <- quantile(cdata$age, 0.75)
+IQRa <- Q3a - Q1a
+cdata <- cdata[cdata$age >= Q1a - 1.5 * IQRa & cdata$age <= Q3a + 1.5 * IQRa, ]
+boxplot(cdata$age, main = "Box Plot of Age After Outliers", ylab = "Age", col = "lightblue", border = "blue")
+```
+
+2.  Systolic Blood Pressure - ap_hi
+
+```{r}
+boxplot(cdata$ap_hi, main = "Box Plot of Systolic Blood Pressure", ylab = "ap_hi", col = "lightblue", border = "blue")
+Q1h <- quantile(cdata$ap_hi, 0.25)
+Q3h <- quantile(cdata$ap_hi, 0.75)
+IQRh <- Q3h - Q1h
+cdata <- cdata[cdata$ap_hi >= Q1h - 1.5 * IQRh & cdata$ap_hi <= Q3h + 1.5 * IQRh, ]
+boxplot(cdata$ap_hi, main = "Box Plot of Systolic Blood Pressure After Removing Outliers", ylab = "ap_hi", col = "lightblue", border = "blue")
+```
+
+3.  Diastolic Blood Pressure - ap_lo
+
+```{r}
+boxplot(cdata$ap_lo, main = "Box Plot of Diastolic Blood Pressure", ylab = "ap_lo", col = "lightblue", border = "blue")
+Q1l <- quantile(cdata$ap_lo, 0.25)
+Q3l <- quantile(cdata$ap_lo, 0.75)
+IQRl <- Q3l - Q1l
+cdata <- cdata[cdata$ap_lo >= Q1l - 1.5 * IQRl & cdata$ap_lo <= Q3l + 1.5 * IQRl, ]
+boxplot(cdata$ap_lo, main = "Box Plot of Diastolic Blood Pressure After Removing Outliers", ylab = "ap_lo", col = "lightblue", border = "blue")
+```
+
+4.  BMI
+
+```{r}
+boxplot(cdata$bmi, main = "Box Plot of BMI", ylab = "bmi", col = "lightblue", border = "blue")
+Q1b <- quantile(cdata$bmi, 0.25)
+Q3b <- quantile(cdata$bmi, 0.75)
+IQRb <- Q3b - Q1b
+cdata <- cdata[cdata$bmi >= Q1b - 1.5 * IQRb  & cdata$bmi <= Q3b + 1.5 * IQRb, ]
+boxplot(cdata$bmi, main = "Box Plot of BMI After Removing Outliers", ylab = "bmi", col = "lightblue", border = "blue")
+```
+
+```{r}
+dim(cdata)
+# Now the dataset has 62,642 instances of data
+```
+
+## Target Variable - Cardio
+
+```{r}
+cdis <- cdata %>%
+  group_by(cardio) %>%
+  summarise(count=n())
+cdis
+```
+
+The two classes are well balanced.
+
+```{r}
+ggplot(cdis, aes(x = factor(cardio, labels = c("No", "Yes")), y = count, fill = cardio, label = count)) +
+  geom_bar(stat = 'identity', fill = c("No" = "lightcoral", "Yes" = "darkred")) +
+  geom_text(aes(label = count), position = position_stack(vjust = 0.5), size = 4, color = "white") +
+  labs(title = "Presence of Cardiovascular Disease", x = "Cardiovascular Disease", y = "Count") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+## Correlation & Feature Selection
+
+```{r}
+library(corrplot)
+cor_matrix <- cor(cdata)
+cor_matrix
+corrplot(cor_matrix, method = "color")
+```
+
+The variables most correlated with cardiovascular disease, and therefore the "best" predictors for this type of disease are high systolic and diastolic blood pressure.
+
+For this project, we will be using logistic regression, kNN and decision trees. For the first two methods, multicollinearity (the presence of significant correlation between two or more predictor variables) comprises a problem. If we include highly correlated features in these models, we might corrupt them.
+
+There is high correlation between diastolic and systolic blood pressure, which means that we need to keep only one of these features. According to [this study](https://pubmed.ncbi.nlm.nih.gov/12698068/#:~:text=In%20this%20review%20we%20compare,a%20better%20predictor%20of%20risk.) published in the NIH, systolic blood pressure is a better indicator of risk, so we will keep ap_hi and get rid of ap_lo.
+
+```{r}
+cd <- subset(cdata, select=-c(ap_lo))
+```
+
+The rest of the variables do not exhibit extremely high correlation that could interfere with our models.
+
+
+# CLASSIFICATION METHODS
+
+## Training & Testing Sets
+
+```{r}
+set.seed(444)
+part <- createDataPartition(y = cd$cardio, p = 0.80, list = FALSE)
+train <- cd[part, ]
+test <- cd[-part, ]
+```
+
+## METHOD 1: Logistic Regression
+
+Logistic regression is a powerful tool for binary classification, where the goal is to predict one of two possible outcomes. Unlike linear regression, which is used for predicting continuous values, logistic regression models the probability that an input belongs to a particular category. This technique is particularly useful in various fields, including medicine - disease diagnosis.
+
+```{r}
+# Fit a logistic regression model
+logmod <- glm(cardio ~ ., data = train, family = binomial)
+summary(logmod)
+```
+
+```{r}
+# binding the intercept and coefficients into a dataframe
+intercept <- summary(logmod)$coefficients[1, "Estimate"]
+coefficients <- summary(logmod)$coefficients[-1, "Estimate"]
+coef_df <- data.frame(Variable = names(coefficients), Coefficient = coefficients)
+coef_df <- rbind(data.frame(Variable = "(Intercept)", Coefficient = intercept), coef_df)
+coef_df
+```
+
+```{r}
+# Make predictions on the test dataset using cut-off point of 0.5
+predicted_probs <- predict(logmod, newdata = test, type = "response")
+predicted_classes <- ifelse(predicted_probs >= 0.5, 1, 0)
+
+# Create a confusion matrix
+logconf <- confusionMatrix(as.factor(test$cardio), as.factor(predicted_classes), positive = "1")
+logconf
+```
+
+The model got only 72% of the predictions correct, which needs improvement. It correctly identified 70% of the positive cases (Sensitivity) and 74.6% of the negative cases (Specificity). 17% of the model's predictions were false positives (Type I error) and 10.8% were false negatives (Type II error).
+
+Next, we will calculate the ROC and AUC for our model. ROC stands for "Receiver Operating Characteristics" which is a graphical representation of a binary classification model's performance across different discrimination thresholds (cut-off points). It plots two key metrics: True Positive Rate (Sensitivity) on the y-axis and False Positive Rate (Specificity) on the x-axis.
+
+AUC stands for "Area Under the ROC Curve", and it's a single value that summarizes the overall performance of a binary classification model.
+
+```{r}
+# ROC curve and AUC
+# ROC shows the performance of a classification model at all classification thresholds
+library(pROC)
+roc_obj <- roc(test$cardio, predicted_probs)
+
+# Print the ROC curve
+plot(roc_obj, main = "ROC Curve")
+abline(a = 0, b = 1, lty = 2)  # Add a diagonal reference line
+
+# Calculate and print the AUC
+auc_value <- auc(roc_obj)
+cat("AUC:", auc_value, "\n") # 0.7837477
+# the model has some discriminatory power but it's not perfect
+```
+
+## METHOD 2: k-Nearest Neighbors
+
+k-NN is a simple algorithm used for both classification and regression tasks. It's based on the idea that similar data points tend to be close to each other in a feature space. It makes predictions by finding the K nearest data points to a new, unseen data point and then aggregating their labels. In short, 'K' stands for the number of neighbors to consider when making a prediction.
+
+```{r}
+library(class)
+# Identifying a ‘best guess’ value of k (the square root of the number of training observations)
+ceiling(sqrt(nrow(train)))
+# 224, so we can choose either 223 or 225
+```
+
+```{r}
+knn.pred1 <- knn(train = train[ ,-10], # we remove the target variable
+                test = test[ ,-10], 
+                cl = train$cardio, 
+                k = 223)
+
+knn_conf1 <- confusionMatrix(as.factor(knn.pred1), as.factor(test$cardio), positive = "1")
+knn_conf1
+```
+
+```{r}
+# using 225
+knn.pred2 <- knn(train = train[ ,-10], # we remove the target variable
+                test = test[ ,-10], 
+                cl = train$cardio, 
+                k = 225)
+
+knn_conf2 <- confusionMatrix(as.factor(knn.pred2), as.factor(test$cardio), positive = "1")
+knn_conf2
+```
+
+The differences in models are very slight, but k = 223 results in a higher accuracy (90.98%). This algortihm was able to detect 92% of the ppositive cases and 89.6% of the negative cases. Type I error was 5% and Type II error was 3.7%.
+
+## METHOD 3: Decision Trees
+
+A decision tree is a hierarchical structure consisting of nodes. The top node is called the "root," and it represents the initial decision. The intermediate nodes are called "internal nodes," and they contain decision criteria. The bottom nodes are called "leaves" or "terminal nodes," and they provide the final prediction or decision. At each internal node of the tree, a decision is made based on a specific feature (attribute) from the dataset. This decision splits the data into subsets, sending them down different branches of the tree. The disadvantages of decision trees include overfitting and instability. They tend to perform well with balanced datasets like ours.
+
+Decision trees are insensitive to multicollinearity so we will use the original dataset with ap_lo.
+
+```{r}
+library(rpart)
+library(rpart.plot)
+
+set.seed(444)
+part <- createDataPartition(y = cdata$cardio, p = 0.80, list = FALSE)
+ttrain <- cdata[part, ]
+ttest <- cdata[-part, ]
+```
+
+Building the model:
+
+```{r}
+set.seed(831)
+c.rpart <- rpart(formula = cardio ~ ., data = ttrain, method = "class")
+c.rpart
+```
+
+Variable Importance:
+
+```{r}
+c.rpart$variable.importance
+```
+
+Visualizing the rpart objected:
+
+```{r}
+prp(x = c.rpart, extra = 2)
+```
+
+The tree stops after splitting at the root node, which is ap_hi - the variable with the highest importance. This means that the algorithm determined that further splits would not significantly improve the purity of the leaf nodes.
+
+Predictions using the test dataset:
+
+```{r}
+preds <- as.factor(predict(c.rpart, newdata = ttest, type='class'))
+testf <- as.factor(ttest$cardio)
+
+c.conf <- confusionMatrix(preds, testf, positive='1')
+c.conf
+```
+
+This model has an accuracy of \~71%, which is not great. The model was only able to predict 60% of the positive cases and 81% of the negative cases. It resulted in way more undetected positive patients than the other 2 algorithms.
+
+# Conclusions
+
+The model with the highest predictive power was the k-Nearest Neighbors, with accuracy of almost 91%.The model can be further improved with hyperparameter tuning but due to limited computational resources that is not possible now.
