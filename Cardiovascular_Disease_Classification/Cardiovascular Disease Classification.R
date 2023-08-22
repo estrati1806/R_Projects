@@ -5,7 +5,6 @@ library(tidyverse)
 library(ggplot2)
 library(DescTools)
 library(caret)
-library(NeuralNetTools)
 
 cdata <- read.csv("cardio.csv", sep=';')
 # data is separated by ; not columns so we convert it do a data frame
