@@ -10,9 +10,7 @@ cdata <- read.csv("cardio.csv", sep=';')
 # data is separated by ; not columns so we convert it do a data frame
 View(cdata)
 str(cdata)
-Abstract(cdata)
-# no missing values
-glimpse(cdata)
+Abstract(cdata) # no missing values
 
 # dropping id column
 cdata <- cdata %>% select(-id)
