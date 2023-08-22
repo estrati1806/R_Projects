@@ -1,4 +1,4 @@
-# Classification Analysis: Artifical Neural Networks
+# Classification Analysis: Logistic Regression, kNN and Decision Trees
 # Cardiovascular Disease Dataset(https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset)
 library(readr)
 library(tidyverse)
