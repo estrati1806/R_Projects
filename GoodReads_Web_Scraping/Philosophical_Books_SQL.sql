@@ -1,7 +1,7 @@
 -- In this script, I will create a new table, fill it with data from philosophical_books.csv, and then query it.
 
 -- DATA DEFINITION LANGUAGE
--- CREATING AN EMPTY TABLE (PK will be added later)
+-- CREATING AN EMPTY TABLE USING THE COLUMNS IN THE CSV
 CREATE TABLE Philosophical_Books (
     Title VARCHAR(255),
     Author VARCHAR(255),
@@ -25,7 +25,7 @@ ADD COLUMN ID INT AUTO_INCREMENT PRIMARY KEY;
 
 -- DATA MANIPULATION LANGUAGE
 -- HOW MANY BOOKS ARE IN THE TABLE?
-SELECT COUNT(*) AS TotalBooks FROM Philosophical_Books;
+SELECT COUNT(*) FROM Philosophical_Books;
 
 -- TOP 20 AUTHORS BASED ON AVERAGE RATING OF ALL BOOKS IN THE LIST & HOW MANY PEOPLE VOTED FOR THEM IN TOTAL
 SELECT 
