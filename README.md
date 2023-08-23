@@ -18,7 +18,7 @@ I also have included SQL examples and an instance of web scraping using Python. 
 | Project Name | Methodology | Link | Description |
 |--------------|-------------|-------|------------|
 |Cardiovascular Disease Classification | R - Logistic Regression, kNN and Decision Trees | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/Cardiovascular_Disease_Classification/Cardiovascular%20Disease%20Classification.R) [RPubs](https://rpubs.com/emistrati/CardiovascularDiseaseClassification)| Conducted classification analysis with 3 different models on a dataset of 70k data instances achieving 91% accuracy. Explored the data and performed feature engineering. |
-|Image Recognition|YOLO (You Only Look Once) | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/YOLO%20Image%20Detection%20-%20Cat%20Image.R)| Experimenting with image classification and detection using the image.darknet package from the BNOSAC repository.|
+|Image Recognition|YOLO (You Only Look Once) | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/YOLO%20Image%20Detection%20-%20Cat%20Image.R)| Experimented with image classification and detection using the image.darknet package from the BNOSAC repository.|
 
 ## Web Scraping
 
