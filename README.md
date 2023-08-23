@@ -18,3 +18,9 @@
 | Project Name  |Methodology | Link   | Description  |
 |---------------|---------|--------|--------------|
 |GoodReads Web Scraper | Python - Beautiful Soup | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_WebScraping_Python/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file ([Philosophical Books.csv](GoodReads_Web_Scraping/philosophical_books.csv)) for further analysis. |
+
+## SQL Projects
+
+|Project Name | Link | Description |
+|-------------|------|-------------|
+|GoodReads List SQL Script| [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_Web_Scraping/Philosophical_Books_SQL.sql)|Wrote a SQL script to create a table, load the scraped GoodReads data into the new table, and then query the said table. |
