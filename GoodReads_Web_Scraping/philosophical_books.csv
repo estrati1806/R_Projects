@@ -1,0 +1,282 @@
+rank,title,author,avg_rating,ratings,score,votes
+1,The Stranger,Albert Camus,4.02,"995,871",8862,90
+2,Crime and Punishment,Fyodor Dostoevsky,4.26,"841,897",7213,73
+3,1984,George Orwell,4.19,"4,302,719",5727,59
+4,The Brothers Karamazov,Fyodor Dostoevsky,4.36,"312,317",4804,49
+5,Siddhartha,Hermann Hesse,4.06,"734,176",4735,49
+6,"Notes from Underground, White Nights, The Dream of a Ridiculous Man, and Selections from The House of the Dead",Fyodor Dostoevsky,4.18,"76,146",3788,39
+7,The Picture of Dorian Gray,Oscar Wilde,4.12,"1,413,635",3630,38
+8,Nausea,Jean-Paul Sartre,3.94,"111,887",3622,38
+9,Animal Farm,George Orwell,3.98,"3,654,887",3620,38
+10,Steppenwolf,Hermann Hesse,4.13,"174,993",3613,37
+11,Brave New World,Aldous Huxley,3.99,"1,771,783",3337,35
+12,The Unbearable Lightness of Being,Milan Kundera,4.11,"439,299",3257,34
+13,The Metamorphosis,Franz Kafka,3.85,"951,366",3253,34
+14,Candide,Voltaire,3.76,"265,496",3247,34
+15,Sophie's World,Jostein Gaarder,3.96,"250,155",3227,33
+16,Hamlet,William Shakespeare,4.02,"904,845",2970,31
+17,Atlas Shrugged,Ayn Rand,3.69,"383,014",2878,29
+18,Thus Spoke Zarathustra,Friedrich Nietzsche,4.07,"142,191",2684,28
+19,Fahrenheit 451,Ray Bradbury,3.97,"2,268,511",2549,27
+20,"Faust, First Part",Johann Wolfgang von Goethe,3.87,"72,759",2516,26
+21,Slaughterhouse-Five,Kurt Vonnegut Jr.,4.09,"1,321,462",2486,26
+22,The Myth of Sisyphus and Other Essays,Albert Camus,4.22,"53,411",2306,24
+23,The Little Prince,Antoine de Saint-Exupéry,4.32,"1,970,463",2193,23
+24,Do Androids Dream of Electric Sheep? (Blade Runner #1),Philip K. Dick,4.09,"429,101",2152,23
+25,Frankenstein,Mary Wollstonecraft Shelley,3.86,"1,500,784",1969,21
+26,The Trial,Franz Kafka,3.96,"302,039",1943,21
+27,The Man Without Qualities,Robert Musil,4.19,"6,552",1864,19
+28,"Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)",Robert M. Pirsig,3.78,"224,812",1734,18
+29,Zorba the Greek,Nikos Kazantzakis,4.05,"48,961",1710,18
+30,The Name of the Rose,Umberto Eco,4.13,"352,618",1707,18
+31,The Magic Mountain,Thomas Mann,4.13,"46,806",1631,17
+32,Demian. Die Geschichte von Emil Sinclairs Jugend,Hermann Hesse,4.14,"105,281",1580,17
+33,"The Handmaid’s Tale (The Handmaid's Tale, #1)",Margaret Atwood,4.13,"1,932,027",1522,16
+34,Moby-Dick,Herman Melville,3.54,"541,428",1494,16
+35,Catch-22,Joseph Heller,3.99,"812,110",1368,15
+36,Gulliver's Travels,Jonathan Swift,3.58,"266,146",1357,15
+37,Clotho's Loom,Shawn StJean,4.02,45,1200,12
+38,Bartleby the Scrivener,Herman Melville,3.93,"60,800",1178,13
+39,The Notebooks of Malte Laurids Brigge,Rainer Maria Rilke,3.96,"8,468",1140,12
+40,Remembrance of Things Past,Marcel Proust,4.35,"12,035",1131,12
+41,The Death of Ivan Ilych,Leo Tolstoy,4.12,"146,661",1119,12
+42,The Catcher in the Rye,J.D. Salinger,3.8,"3,368,689",1115,12
+43,The Book of Disquiet,Fernando Pessoa,4.42,"28,530",1079,11
+44,"Ishmael: An Adventure of the Mind and Spirit (Ishmael, #1)",Daniel Quinn,4,"94,608",1078,11
+45,Narcissus and Goldmund,Hermann Hesse,4.21,"59,109",1058,11
+46,Ulysses,James Joyce,3.75,"124,342",1047,11
+47,A Perfect Square,Isobel Blackthorn,3.97,31,1000,10
+48,A Confession,William F. Aicher,4.1,52,1000,10
+49,Don Quixote,Miguel de Cervantes Saavedra,3.89,"258,620",970,11
+50,The Glass Bead Game,Hermann Hesse,4.11,"37,277",923,10
+51,Journey to the End of the Night,Louis-Ferdinand Céline,4.2,"39,958",866,9
+52,When Nietzsche Wept,Irvin D. Yalom,4.36,"67,245",856,9
+53,The Fall,Albert Camus,4.04,"97,232",830,9
+54,Ubik,Philip K. Dick,4.1,"103,213",765,8
+55,Dr. Jekyll and Mr. Hyde,Robert Louis Stevenson,3.83,"537,767",765,9
+56,The Elegance of the Hedgehog,Muriel Barbery,3.79,"178,255",764,8
+57,Either/Or: A Fragment of Life,Søren Kierkegaard,4.17,"8,644",668,7
+58,His Dark Materials (His Dark Materials #1-3),Philip Pullman,4.28,"158,215",667,7
+59,The Modern Man: A philosophical divagation about the evil banality of daily acts,Cristiane Serruya,3.97,72,600,6
+60,Existing the Moments,Taylor DiVico,3.33,9,599,6
+61,The Wall,Jean-Paul Sartre,4.07,"24,224",586,6
+62,The Razor's Edge,W. Somerset Maugham,4.19,"46,188",574,6
+63,Immortality,Milan Kundera,4.14,"36,830",556,6
+64,The Idiot,Fyodor Dostoevsky,4.2,"171,277",545,6
+65,The Immoralist,André Gide,3.57,"11,571",522,6
+66,Jacques the Fatalist,Denis Diderot,3.81,"8,437",519,6
+67,Invisible Cities,Italo Calvino,4.12,"78,866",454,5
+68,The Confusions of Young Törless,Robert Musil,3.68,"8,510",446,5
+69,Solaris,Stanislaw Lem,3.99,"99,635",444,5
+70,The Woman in the Dunes,Kobo Abe,3.9,"30,767",425,5
+71,Robinson Crusoe,Daniel Defoe,3.68,"294,723",389,5
+72,"Oryx and Crake (MaddAddam, #1)",Margaret Atwood,4.01,"258,357",385,4
+73,The Plague,Albert Camus,4.02,"244,578",379,5
+74,Death on the Installment Plan,Louis-Ferdinand Céline,4.21,"8,066",377,4
+75,The Geranium Woman,Hazel Manuel,4.52,25,375,4
+76,Walden,Henry David Thoreau,3.78,"183,533",364,4
+77,The Lord Chandos Letter and Other Writings,Hugo von Hofmannsthal,4.06,559,354,4
+78,Demons,Fyodor Dostoevsky,4.29,"48,873",332,4
+79,One Hundred Years of Solitude,Gabriel García Márquez,4.11,"928,104",329,4
+80,Ox Herding: A Secular Pilgrimage,Jackie Griffiths,2.86,29,300,3
+81,The Infinite Jeff - A Parable of Change: Part 1: Journey into Insight,Will Holcomb,4.62,147,300,3
+82,Turtle A,Ellie Martin-Mckinsey,4.57,21,300,3
+83,Anathem,Neal Stephenson,4.17,"70,055",295,3
+84,Wittgenstein's Mistress,David Markson,3.95,"6,244",294,3
+85,Traveler of the Century,Andrés Neuman,3.83,"2,019",293,3
+86,Adaptation,G.C. Huxley,3.79,24,292,3
+87,"Dune (Dune, #1)",Frank Herbert,4.26,"1,241,397",292,3
+88,Heart of Darkness,Joseph Conrad,3.43,"493,642",291,4
+89,"Combray (In Search of Lost Time, #1.1)",Marcel Proust,3.5,"1,352",288,3
+90,"Children of Dune (Dune, #3)",Frank Herbert,3.96,"168,727",283,3
+91,The Castle,Franz Kafka,3.94,"58,834",280,3
+92,Ilmurinn: Saga af Morðingja,Patrick Süskind,4.03,"438,074",278,3
+93,Invisible Man,Ralph Ellison,3.91,"181,854",277,3
+94,The Long Weekend,Ross Lennon,4.53,38,268,3
+95,The Novices of Sais,Novalis,3.97,408,266,3
+96,Anthem,Ayn Rand,3.62,"150,772",266,3
+97,Fictions,Jorge Luis Borges,4.42,"63,615",263,3
+98,The Divine Comedy,Dante Alighieri,4.07,"145,466",262,3
+99,Molloy / Malone Dies / The Unnamable,Samuel Beckett,4.28,"8,808",253,3
+100,Maldoror and the Complete Works,Comte de Lautréamont,4.26,"3,775",251,3
+101,The Old Man and the Sea,Ernest Hemingway,3.8,"1,083,747",247,3
+102,Confessions,Augustine of Hippo,3.95,"60,725",236,3
+103,"The Sunday Philosophy Club (Isabel Dalhousie, #1)",Alexander McCall Smith,3.36,"23,336",200,2
+104,[sic],Scott  Kelly,3.87,351,200,2
+105,The Nature of Truth,Sergio Troncoso,3.8,41,200,2
+106,Disturbances in the Field,Lynne Sharon Schwartz,4.05,552,200,2
+107,Meditation on Space-Time,Leonard Seet,3.94,32,200,2
+108,"The Great Apocalypse (Sparlock of the Multiverse, #1)",Daniel   Thompson,3.41,54,200,2
+109,Untitled Document: The Mystery Unfolds,Sufyan Sher,4.1,10,200,2
+110,Anno 2020,James Morcan,4.53,32,200,2
+111,The Philosopher's Apprentice,James K. Morrow,3.44,804,199,2
+112,The Thought Gang,Tibor Fischer,3.93,"1,803",199,2
+113,Flow Down Like Silver,Ki Longfellow,3.98,"4,610",198,2
+114,Without Opposite: A Philosophical Adventure,Marcel Eschauzier,4.06,16,198,2
+115,Scepticism Inc.,Bo Fowler,4.18,581,197,2
+116,Cat's Cradle,Kurt Vonnegut Jr.,4.16,"389,616",197,2
+117,Philosophy Made Simple,Robert Hellenga,3.41,672,196,2
+118,"Dune Messiah (Dune, #2)",Frank Herbert,3.89,"248,449",196,2
+119,The Passion,Jeanette Winterson,4.11,"22,845",195,2
+120,VALIS,Philip K. Dick,3.92,"28,863",193,2
+121,The Book of Evidence (The Freddie Montgomery Trilogy #1),John Banville,3.7,"5,181",189,2
+122,Huis clos,Jean-Paul Sartre,4.12,"37,041",189,2
+123,Plato and a Platypus Walk Into a Bar: Understanding Philosophy Through Jokes,Thomas Cathcart,3.76,"15,963",188,2
+124,After Many a Summer Dies the Swan,Aldous Huxley,3.72,"2,933",187,2
+125,The Futurological Congress: From the Memoirs of Ijon Tichy,Stanisław Lem,4.19,"12,158",187,2
+126,Kira-Kira,Cynthia Kadohata,3.96,"26,142",181,2
+127,The Fate of Lily Knowles,H.B.  Morris,4.63,27,181,2
+128,The Secret Magdalene,Ki Longfellow,4.15,"4,485",180,2
+129,Dream Dancer (Kerrion Empire #1),Janet E. Morris,3.94,234,180,2
+130,The Golem,Gustav Meyrink,3.85,"7,494",179,2
+131,Confessions,Jean-Jacques Rousseau,3.58,"8,610",179,2
+132,"The Dalai Lama's Cat (The Dalai Lama's Cat, #1)",David Michie,4.17,"13,834",177,2
+133,We the Living,Ayn Rand,3.94,"28,708",176,2
+134,Quo Vadis,Henryk Sienkiewicz,4.02,"35,917",171,2
+135,Alias Grace,Margaret Atwood,4.04,"138,147",170,2
+136,The Sun Also Rises,Ernest Hemingway,3.8,"427,329",167,2
+137,Outpassage,Janet Morris,4.11,225,164,2
+138,2001: A Space Odyssey,Arthur C. Clarke,4.17,"303,693",163,2
+139,The Fountainhead,Ayn Rand,3.88,"318,044",163,2
+140,Watchmen,Alan Moore,4.38,"543,189",163,2
+141,Molloy,Samuel Beckett,4.05,"8,155",160,2
+142,The Crying of Lot 49,Thomas Pynchon,3.69,"83,506",155,2
+143,"Tropic of Cancer (Tropic, #1)",Henry Miller,3.67,"70,437",153,2
+144,The Dispossessed: An Ambiguous Utopia,Ursula K. Le Guin,4.24,"116,775",153,2
+145,Foucault's Pendulum,Umberto Eco,3.91,"68,130",151,2
+146,The Nonexistent Knight & The Cloven Viscount,Italo Calvino,4.03,"5,159",144,2
+147,"The Writings of Jonathan Swift: Authoritative Texts, Backgrounds, Criticism",Jonathan Swift,4.27,163,138,2
+148,Generation X: Tales for an Accelerated Culture,Douglas Coupland,3.74,"28,404",131,2
+149,A Scanner Darkly,Philip K. Dick,4.02,"99,178",128,2
+150,V for Vendetta,Alan Moore,4.26,"302,288",114,2
+151,The Island of the Day Before,Umberto Eco,3.49,"15,218",108,2
+152,Unholy Quest,John J. Enright,3.25,4,100,1
+153,Everyman His Own Gravity,Andrew Weaver,4,7,100,1
+154,A Lost Argument: A Latter-Day Novel,Therese Doucet,3.55,38,100,1
+155,The Serial Killer's Diet Book,Kevin Postupack,3.78,18,100,1
+156,The Land of the Free,T.J. Tucker,3.77,70,100,1
+157,The Seed,Fola,3.58,40,100,1
+158,What Happened to Tom,Christopher Taffen,3,1,100,1
+159,Act Locally,S.L. Vail,4.33,9,100,1
+160,Draining the Swamp,Ed Gibney,4.44,9,100,1
+161,Freedom Club,Saul Garnell,3.69,62,100,1
+162,Reverb,J. Cafesin,3.63,342,100,1
+163,Double Mirrors,Dylan Robert Tauber,4.33,6,100,1
+164,God on Trial,Sabri Bebawi,4.04,25,100,1
+165,The Yoga Sutras,Jackson Radcliffe,3.91,23,100,1
+166,Be God To Yourself,Jean-Yves Crozier,3.74,23,100,1
+167,The Tragic Fate of Moritz Tot,Dana Todorović,3.64,33,100,1
+168,From Dust to DNA,R.J. Hogarth,3.7,23,100,1
+169,The Drifting Self,Andre Averbug,3.4,25,100,1
+170,Justifiable Homicide: A Political Thriller,Robert W. McGee,3.87,60,100,1
+171,The Magic Life - A Novel Philosophy,Ace Starry,4,36,100,1
+172,Mentor Me: GA=T+E-A Formula to Fulﬁll Your Greatest Achievement,Ken Poirot,4.12,83,100,1
+173,Anticipation - Book One,M.D. Curzon,4.67,3,100,1
+174,"Memorias, reescrituras y futurismos",Manuel A. Crespo-Rodríguez,5,2,100,1
+175,Bound Before the Morrow,David J. Ring III,3.81,21,100,1
+176,The Celestines: A Short Story,Luke F.D. Marsden,4.25,8,100,1
+177,Genesis,Andreas Laurencius,3.96,23,100,1
+178,The Schopenhauer Cure,Irvin D. Yalom,4.27,"24,070",100,1
+179,"I Thirst (The Veritas Chronicles, #1)",Gina Marinello-Sweeney,3.82,77,100,1
+180,The Last Samurai,Helen DeWitt,4.14,"8,241",100,1
+181,The Recognitions,William Gaddis,4.2,"5,466",100,1
+182,Last Call,Sam Parker  McLeod,4,17,100,1
+183,What Happened to Tom,Peg Tittle,4.22,9,100,1
+184,The Unnamable,Samuel Beckett,4,2733,100,1
+185,Radiant Cool: A Novel Theory of Consciousness (A Bradford Book),Dan Edward Lloyd,3.25,88,100,1
+186,Lunch,William A.B. Smith,5,2,100,1
+187,Celestial Mechanics: A Tale for a Mid-Winter Night,William Least Heat-Moon,3.72,85,100,1
+188,"The Most Wretched Thing Imaginable or, Beneath the Burnt Umbrella",Stephen Moles,3.78,18,100,1
+189,There's Something You Should Know,E. Barnes,3.5,2,100,1
+190,The Book of Ralph,Christopher Steinsvold,3.77,261,100,1
+191,What Lies Beyond The Stars,Michael Goorjian,4.23,763,100,1
+192,To Desire,Vatsal  Surti,3.64,14,100,1
+193,"The Atheist in the Attic (PM's Outspoken Authors, #20)",Samuel R. Delany,3.8,142,100,1
+194,Alamut,Vladimir Bartol,4.32,"11,406",100,1
+195,Forty Ways to Square a Circle,Neil Hummasti,5,10,100,1
+196,Rockhead,Sean Toren,4.55,11,100,1
+197,Into the Unbounded Night,Mitchell James Kaplan,3.93,75,100,1
+198,A Modern Declaration of Independence: Crimes Against Humanity and a New System,Jakub Lasak,4.67,24,100,1
+199,Another Life,Owen W. Knight,4.12,24,100,1
+200,The Thresher,Paul  Christensen,4.22,9,100,1
+201,God Emperor of Dune (Dune Chronicles #4),Frank Herbert,3.87,"101,090",100,1
+202,The Pilgrim's Regress,C.S. Lewis,3.85,"9,662",100,1
+203,The Nihilist,Keijo Kangur,4.06,47,100,1
+204,SINEDIE (Tesə): the Deathkneel Complex,Henry Marnes,5,1,100,1
+205,Ubiety,Grzegorz Kunowski,3.36,50,100,1
+206,The Apprentice Storyteller (Wishmaster #1),Astrid V.J.,4.38,105,100,1
+207,The elixir of life,Arthur Ransome,4,2,100,1
+208,Without Opposite: A Philosophical Adventure,Marcel Eschauzier,4.06,16,100,1
+209,Red wine and Dark Chocolate,Buck Starmer,3,2,100,1
+210,Der Ekel,Jean-Paul Sartre,3.94,"111,887",100,1
+211,Escape from Heaven,Jerry Marcus,5,1,100,1
+212,"Friends, Lovers, Chocolate (Isabel Dalhousie, #2)",Alexander McCall Smith,3.63,"13,581",99,1
+213,Report to Greco,Nikos Kazantzakis,4.31,"3,706",99,1
+214,Finnegus Boggs—Billy & Tyron,J. Cafesin,4.54,13,99,1
+215,The Late-Summer Passion of a Woman of Mind,Rebecca Goldstein,3.75,71,99,1
+216,Anticipation - Book Two,M.D. Curzon,4.5,2,99,1
+217,The Transhumanist Wager,Zoltan Istvan,3.52,953,99,1
+218,The Spinoza Problem,Irvin D. Yalom,4.24,"14,339",99,1
+219,Into That Forest,Louis Nowra,3.81,"1,562",99,1
+220,The Road Trip Dialogues (Rev and Dylan #1),Jass Richards,4.2,5,99,1
+221,Foe,J.M. Coetzee,3.42,"10,800",99,1
+222,Gaiia,Hares Youssef,4.4,5,99,1
+223,The Infinite Jeff - A Parable of Change: Part 2: Discover a New World,Will Holcomb,4.91,57,99,1
+224,Without Opposite: A Philosophical Adventure,Marcel Eschauzier,4.06,16,99,1
+225,The Ubiquitous masquereade,Buck Starmer,5,1,99,1
+226,"Lila: An Inquiry Into Morals (Phaedrus, #2)",Robert M. Pirsig,3.83,"6,876",99,1
+227,Daughters of God,Jerry   Marcus,4.33,3,99,1
+228,Moonsleep and Other Stories,Liz  Tuckwell,4.15,41,99,1
+229,"The Right Attitude to Rain (Isabel Dalhousie, #3)",Alexander McCall Smith,3.77,"10,557",98,1
+230,Warrior's Song (The Parker Shaw Series),Thomas M. Hill,4.14,7,98,1
+231,The Song and the Pendant,Magnus Von Black,4.67,9,98,1
+232,Anticipation - Book Three,M.D. Curzon,4,2,98,1
+233,"John Dies at the End (John Dies at the End, #1)",David  Wong,3.88,"72,404",98,1
+234,"Fifteen Dogs (Quincunx, #2)",André Alexis,3.79,"24,273",98,1
+235,"The Rose and the Sword (The Veritas Chronicles, #2)",Gina Marinello-Sweeney,4.24,33,98,1
+236,The Blasphemy Tour (Rev and Dylan #2),Jass Richards,2.83,6,98,1
+237,Bobby's Girl,Bernie Morris,4.58,76,98,1
+238,Elizabeth Costello,J.M. Coetzee,3.46,"9,059",98,1
+239,The Infinite Jeff (part 3): A Parable of Change,Will Holcomb,4.85,39,98,1
+240,Circus of Charades,Buck Starmer,5,1,98,1
+241,"Abraham, Isaac, Jacob and Zev",Jerry   Marcus,5,2,98,1
+242,"The Careful Use of Compliments (Isabel Dalhousie, #4)",Alexander McCall Smith,3.82,"9,217",97,1
+243,Therapy,David Lodge,3.78,"3,879",97,1
+244,36 Arguments for the Existence of God: A Work of Fiction,Rebecca Goldstein,3.56,"2,231",97,1
+245,Kabbalah: A Love Story,Rabbi Lawrence Kushner,3.76,423,97,1
+246,License to Do That (Rev and Dylan #3),Jass Richards,5,1,97,1
+247,His Master's Voice,Stanisław Lem,4.09,"4,566",97,1
+248,The Ubiqitous Masquerade,Buck Starmer,5,1,97,1
+249,"The Art of Purring (The Dalai Lama's Cat, #2)",David Michie,4.42,"3,496",96,1
+250,All the World's a Simulation,Stephen Moles,3.9,10,96,1
+251,Gravity's Rainbow,Thomas Pynchon,4,"42,679",96,1
+252,Do Not Feed The Clowns,Buck Starmer,4.5,2,96,1
+253,Feed,M.T. Anderson,3.55,"62,611",95,1
+254,"The Dalai Lama's Cat and the Power of Meow (The Dalai Lama's Cat, #3)",David Michie,4.49,"2,297",95,1
+255,Wittgenstein's Nephew,Thomas Bernhard,4.03,"5,499",95,1
+256,In The Court of the One-Eyed King,Buck Starmer,4.5,2,95,1
+257,The Chrysalids,John Wyndham,3.93,"53,473",95,1
+258,Grendel,John Gardner,3.69,"37,472",94,1
+259,She Came to Stay,Simone de Beauvoir,3.9,"4,565",93,1
+260,The Complete Stories,Franz Kafka,4.34,"26,021",93,1
+261,Quincas Borba,Machado de Assis,3.96,"6,168",92,1
+262,Knulp,Hermann Hesse,3.88,"6,486",91,1
+263,Cat's Eye,Margaret Atwood,3.94,"66,580",91,1
+264,Five Women,Robert Musil,3.84,353,90,1
+265,The Tao of Pooh,Benjamin Hoff,4,"116,681",89,1
+266,The Discovery of Heaven,Harry Mulisch,4.17,"15,137",88,1
+267,Mortal Engines,Stanisław Lem,3.72,"3,919",88,1
+268,Tempus Unbound,Janet E. Morris,4.14,112,84,1
+269,"Wind from the Abyss (Silistra, #3)",Janet E. Morris,3.97,115,83,1
+270,Cosmos,Witold Gombrowicz,4.02,"3,851",83,1
+271,A Man and His God,Janet E. Morris,4.43,94,81,1
+272,The Tempest,William Shakespeare,3.79,"202,619",68,1
+273,Persian Letters,Montesquieu,3.65,"7,065",59,1
+274,The Temple of the Golden Pavilion,Yukio Mishima,3.98,"18,232",53,1
+275,The Robbers,Friedrich Schiller,3.46,"10,199",51,1
+276,On the Overgrown Path,David Herter,3.92,26,50,1
+277,Waiting for the Barbarians,J.M. Coetzee,3.93,"30,706",49,1
+278,Memoirs Found in a Bathtub,Stanisław Lem,3.77,"3,601",47,1
+279,Ubu Roi,Alfred Jarry,3.58,"6,343",46,1
+280,Return From the Stars,Stanisław Lem,3.95,"5,484",45,1
+281,The Lost Honor of Katharina Blum,Heinrich Böll,3.69,"14,898",44,1
