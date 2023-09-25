@@ -31,3 +31,4 @@ I am currently working on more projects which I will add here soon. 😊
 |Project Name | Link | Description |
 |-------------|------|-------------|
 |GoodReads List SQL Script| [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_Web_Scraping/Philosophical_Books_SQL.sql)|Wrote a SQL script to create a table, load the scraped GoodReads data into the new table, and then query the said table. |
+|Reporting in SQL - Examples | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/SQL/Reporting%20in%20SQL%20-%20Examples)|SQL Reporting examples completed in DataCamp's "Reporting in SQL" course.|
