@@ -19,6 +19,11 @@ I am currently working on more projects which I will add here soon. 😊
 |--------------|-------------|-------|------------|
 |Cardiovascular Disease Classification | R - Logistic Regression, kNN and Decision Trees | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/Cardiovascular_Disease_Classification/Cardiovascular%20Disease%20Classification.R) [RPubs](https://rpubs.com/emistrati/CardiovascularDiseaseClassification)| Conducted classification analysis with 3 different models on a dataset of 70k data instances achieving 91% accuracy. Explored the data and performed feature engineering. |
 
+## Financial Applications
+| Project Name  | Methodology  | Link  | Description  |
+|---------------|--------------|-------|--------------|
+|Robo-Advisor Simulation | Python | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
+
 ## Web Scraping
 
 | Project Name  |Methodology | Link   | Description  |
