@@ -22,7 +22,7 @@ I am currently working on more projects which I will add here soon. 😊
 ## Financial Applications
 | Project Name  | Methodology  | Link  | Description  |
 |---------------|--------------|-------|--------------|
-|Robo-Advisor Simulation | Python | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
+|Robo-Advisor Simulation | Python | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo%20Advisor%20Simulation/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
 
 ## Web Scraping
 
