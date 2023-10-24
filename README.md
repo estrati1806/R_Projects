@@ -18,7 +18,7 @@ I am currently working on more projects which I will add here soon. 😊
 | Project Name | Methodology | Link | Description |
 |--------------|-------------|-------|------------|
 |Cardiovascular Disease Classification | R - Logistic Regression, kNN and Decision Trees | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/Cardiovascular_Disease_Classification/Cardiovascular%20Disease%20Classification.R) [RPubs](https://rpubs.com/emistrati/CardiovascularDiseaseClassification)| Conducted classification analysis with 3 different models on a dataset of 70k data instances achieving 91% accuracy. Explored the data and performed feature engineering. |
-| Mall Customer Segmentation | R - K-Means Clustering | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/Mall%20Customer%20Segmentation/Mall%20Customers%20K-Means%20Clustering.R) | Implemented a kMC algorithm to segment customers into 6 clusters. Identified customers and provided tips on how to cater to them. Low WSS and 77.7% BSS/TSS ratio. |
+| Mall Customer Segmentation | R - K-Means Clustering | [GitHub](https://github.com/estrati1806/estrati_portfolio/blob/main/Mall%20Customer%20Segmentation/Mall%20Customers%20K-Means%20Clustering.R) [RPubs](https://rpubs.com/emistrati/MallSegmentationKMC)| Implemented a kMC algorithm to segment customers into 6 clusters. Identified customers and provided tips on how to cater to them. Low WSS and 77.7% BSS/TSS ratio. |
 
 ## Financial Applications
 | Project Name  | Methodology  | Link  | Description  |
