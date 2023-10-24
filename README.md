@@ -3,7 +3,7 @@ Hello! 👋
 
 My name is Emi Strati and I am passionate about data analytics and science. Here you will find a bunch of my projects and experiments, where I showcase different tools and methodologies. I have uploaded examples of what I can do with R for data analysis, visualization, and machine learning models. A couple of these projects are also published on RPubs where they are accompanied with longer descriptions to explain my process. I also have included SQL examples and an instance of web scraping using Python. 
 
-I am currently working on more projects which I will add here soon. 😊
+Check out my [RPubs](https://rpubs.com/emistrati). 😊
 
 # Portfolio
 ## Data Analysis & Visualization
