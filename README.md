@@ -23,13 +23,13 @@ Check out my [RPubs](https://rpubs.com/emistrati). 😊
 ## Financial Applications
 | Project Name  | Methodology  | Link  | Description  |
 |---------------|--------------|-------|--------------|
-|Robo-Advisor Simulation | Python | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo%20Advisor%20Simulation/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
+|Robo-Advisor Simulation | Python | [Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo%20Advisor%20Simulation/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
 
 ## Web Scraping
 
 | Project Name  |Methodology | Link   | Description  |
 |---------------|---------|--------|--------------|
-|GoodReads Web Scraper | Python - Beautiful Soup | [Jupyter Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_Web_Scraping/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file ([Philosophical Books.csv](GoodReads_Web_Scraping/philosophical_books.csv)) for further analysis. |
+|GoodReads Web Scraper | Python - Beautiful Soup | [Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/GoodReads_Web_Scraping/GoodReads%20Web%20Scraping.ipynb) | Scrapes data from the "Best Philosophical Fiction" list on GoodReads and compiles it into a csv file ([Philosophical Books.csv](GoodReads_Web_Scraping/philosophical_books.csv)) for further analysis. |
 
 ## SQL Projects
 
