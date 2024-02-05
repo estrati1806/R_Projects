@@ -24,6 +24,7 @@ Check out my [RPubs](https://rpubs.com/emistrati). 😊
 | Project Name  | Methodology  | Link  | Description  |
 |---------------|--------------|-------|--------------|
 |Robo-Advisor Simulation | Python | [Notebook](https://github.com/estrati1806/estrati_portfolio/blob/main/Robo%20Advisor%20Simulation/Robo_Advisor_Simulation.ipynb) | This Python code simulates a simple robo-advisor. A robo-advisor is a digital platform that provides automated, algorithm-driven financial planning services with little to no human intervention. This simulation takes a user's risk appetite as input (low, medium, or high) and recommends a portfolio distribution between stocks and bonds. |
+|Python Programming in Finance | scikit-learn, statsmodels | [Folder](https://github.com/estrati1806/estrati_portfolio/tree/main/Python%20Programming%20in%20Finance) | A compilation of Python tutorials for Finance students at Drexel. Explains linear regression & how to apply this regression in Python for portfolio risk analysis.|
 
 ## Web Scraping
 
